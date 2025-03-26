@@ -1,15 +1,9 @@
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local PlayerGui = LocalPlayer.PlayerGui
-
-local function notification(msg)
-    return string.format("[No Render]: %s", msg)
-end
-
 local function NoRender(character)
     character:WaitForChild("Humanoid", math.huge)
     character:WaitForChild("HumanoidRootPart", math.huge)
-    print(notification("Init Character"))
     local GuiToRemove = {"HandwrittenNote", "TimeEvent", "Events"}
     for _, name in pairs(guiToRemove) do
         local Gui = PlayerGui:FindFirstChild(name)
